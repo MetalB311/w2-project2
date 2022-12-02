@@ -1,11 +1,9 @@
-import './App.css';
+import './App.css'
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import axios from "axios"
 import Header from './components/Header'
 import MovieScreen from './components/MovieScreen'
 import Watchlist from './components/Watchlist'
-
-
 
 function App() {
   const [list, setList] = useState([])
@@ -20,9 +18,10 @@ function App() {
     setList(newState)
   }
   const getData = () => {
-    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
+    axios
+    .get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
     .then((res) => {
-      setMovieList(res.data.results)
+      setMovieList(res.data.results)  
     })
   }
   useEffect(() => {
