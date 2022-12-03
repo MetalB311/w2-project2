@@ -19,7 +19,7 @@ const Header = () => {
         stroke-linejoin='round'
         />
         </svg>
-        <h2>Movie App</h2>
+        <h2>Byron's Movie App</h2>
         </header>
     )
 }
